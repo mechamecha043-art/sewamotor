@@ -34,7 +34,7 @@ export default function MotorPage() {
       <MotorListing />
 
       {/* CTA Bottom */}
-      <section className="py-16 bg-gradient-to-br from-rajawali via-rajawali-dark to-black relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-rajawali via-rajawali-dark to-rajawali-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero-motorcycle.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">

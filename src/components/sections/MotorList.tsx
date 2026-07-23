@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Bike, Zap, Star, Crown, Feather } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 interface Motor {
   name: string;
@@ -10,7 +11,7 @@ interface Motor {
   weekly: string;
   monthly: string;
   desc: string;
-  icon: typeof Bike;
+  image: string;
   popular?: boolean;
 }
 
@@ -21,7 +22,7 @@ const motors: Motor[] = [
     weekly: 'Rp500.000',
     monthly: 'Rp1.500.000',
     desc: 'Mesin 110cc eSP hemat bahan bakar.',
-    icon: Bike,
+    image: '/motors/beat.webp',
   },
   {
     name: 'Honda Vario 125',
@@ -29,7 +30,7 @@ const motors: Motor[] = [
     weekly: 'Rp550.000',
     monthly: 'Rp1.600.000',
     desc: 'Skutik nyaman untuk penggunaan harian.',
-    icon: Zap,
+    image: '/motors/vario.webp',
   },
   {
     name: 'Yamaha Gear',
@@ -37,7 +38,7 @@ const motors: Motor[] = [
     weekly: 'Rp500.000',
     monthly: 'Rp1.500.000',
     desc: 'Praktis dan irit.',
-    icon: Feather,
+    image: '/motors/gear.webp',
   },
   {
     name: 'Honda Scoopy',
@@ -45,7 +46,7 @@ const motors: Motor[] = [
     weekly: 'Rp600.000',
     monthly: 'Rp1.700.000',
     desc: 'Stylish dan nyaman.',
-    icon: Star,
+    image: '/motors/scoopy.webp',
   },
   {
     name: 'Yamaha NMAX',
@@ -53,7 +54,7 @@ const motors: Motor[] = [
     weekly: 'Rp800.000',
     monthly: 'Rp2.250.000',
     desc: 'Premium Maxi Scooter.',
-    icon: Crown,
+    image: '/motors/nmax.webp',
     popular: true,
   },
   {
@@ -62,7 +63,7 @@ const motors: Motor[] = [
     weekly: 'Rp800.000',
     monthly: 'Rp2.250.000',
     desc: 'Elegant dan nyaman.',
-    icon: Crown,
+    image: '/motors/pcx.webp',
     popular: true,
   },
   {
@@ -71,7 +72,7 @@ const motors: Motor[] = [
     weekly: 'Rp650.000',
     monthly: 'Rp2.000.000',
     desc: 'Sporty dan bertenaga.',
-    icon: Zap,
+    image: '/motors/aerox.webp',
   },
 ];
 
@@ -149,20 +150,24 @@ export default function MotorList() {
                 </div>
               )}
 
-              {/* Top gradient bar */}
-              <div className="h-2 bg-gradient-to-r from-rajawali/60 via-rajawali to-rajawali/60" />
-
-              <div className="p-6">
-                {/* Icon & Name */}
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-12 h-12 rounded-2xl bg-rajawali/10 flex items-center justify-center group-hover:bg-rajawali transition-colors duration-300">
-                    <motor.icon className="w-6 h-6 text-rajawali group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">{motor.name}</h3>
+              {/* Motor Image */}
+              <div className="relative w-full h-44 sm:h-48 bg-muted/50 overflow-hidden">
+                <Image
+                  src={motor.image}
+                  alt={motor.name}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <h3 className="text-lg font-bold text-white drop-shadow-lg">{motor.name}</h3>
                 </div>
+              </div>
 
+              <div className="p-5">
                 {/* Pricing */}
-                <div className="space-y-2 mb-5">
+                <div className="space-y-2 mb-4">
                   <div className="flex justify-between items-center py-2 border-b border-border/50">
                     <span className="text-sm text-muted-foreground">Harian</span>
                     <span className="font-bold text-foreground">{motor.daily}<span className="text-xs text-muted-foreground font-normal"> / hari</span></span>
@@ -178,7 +183,7 @@ export default function MotorList() {
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-muted-foreground mb-5">{motor.desc}</p>
+                <p className="text-sm text-muted-foreground mb-4">{motor.desc}</p>
 
                 {/* CTA */}
                 <a href={getWaLink(motor)} target="_blank" rel="noopener noreferrer">

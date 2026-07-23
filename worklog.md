@@ -120,3 +120,59 @@ Stage Summary:
 - Zero browser console errors
 - Screenshots saved to /home/z/my-project/screenshots/
 - No issues found
+
+---
+Task ID: 5
+Agent: Browser Verifier
+Task: Verify motor photos on listing pages
+
+Work Log:
+- Set desktop viewport (1920x1080) and opened homepage at localhost:3000
+- Waited 10 seconds for full page load, then scrolled to "Pilihan Terbaik Kami" section
+- Verified 3 motor cards on homepage (Vario 125, NMAX, PCX):
+  - Honda Vario 125: /motors/vario.webp (633x362 natural), complete=true, display 323x208 ✓
+  - Yamaha NMAX: /motors/nmax.webp (633x362 natural), complete=true, display 323x208 ✓
+  - Honda PCX: /motors/pcx.webp (633x362 natural), complete=true, display 323x208 ✓
+- Verified motor name overlay: all 3 cards have name at `absolute bottom-3 left-4` with white bold text + drop shadow ✓
+- Verified image structure: `relative w-full h-48 sm:h-52 bg-muted/50 overflow-hidden`, images at top of card ✓
+- Verified image styling: `object-cover object-center group-hover:scale-105 transition-transform duration-500` ✓
+- Navigated to /motor page, waited 10 seconds
+- Verified all 7 motor cards have real photos loaded:
+  - Honda Beat: /motors/beat.webp (480x274), complete=true ✓
+  - Honda Vario 125: /motors/vario.webp (480x274), complete=true ✓
+  - Yamaha Gear: /motors/gear.webp (480x274), complete=true ✓
+  - Honda Scoopy: /motors/scoopy.webp (480x274), complete=true ✓
+  - Yamaha NMAX: /motors/nmax.webp (480x274), complete=true ✓
+  - Honda PCX: /motors/pcx.webp (480x274), complete=true ✓
+  - Yamaha Aerox: /motors/aerox.webp (480x274), complete=true ✓
+- Verified "Populer" badges on NMAX and PCX:
+  - Yamaha NMAX: badge present (DIV, `absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-rajawali text-white text-xs font-bold`), visible=true ✓
+  - Honda PCX: badge present (DIV, same styling), visible=true ✓
+  - Beat, Vario, Gear, Scoopy, Aerox: no badge (correct) ✓
+- Verified hover effects on all 7 motor images: `group-hover:scale-105 transition-transform duration-500` ✓
+- Verified bottom CTA gradient on /motor: `bg-gradient-to-br from-rajawali via-rajawali-dark to-rajawali-dark` = BLUE (rgb(37,99,235) → rgb(29,78,216)), NOT black ✓
+- Switched to mobile viewport (390x844) and repeated checks
+- Mobile homepage: 3 motor cards loaded correctly (390x223 natural, 356x192/176 display) ✓
+- Mobile /motor page: verified grid is responsive (`grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`, 1 column on mobile) ✓
+- Mobile /motor: all 7 images load correctly (Aerox initially lazy-loaded below fold, loaded after scroll) ✓
+- Mobile /motor: 2 "Populer" badges found (on NMAX and PCX), both visible ✓
+- Mobile /motor: CTA gradient confirmed blue (rgb(37,99,235) → rgb(29,78,216)) ✓
+- Checked browser console: zero errors on both desktop and mobile ✓
+- Took 7 screenshots saved to /home/z/my-project/screenshots/
+
+Stage Summary:
+- ALL CHECKS PASSED - Motor photos verified on both homepage and /motor page
+- HOMEPAGE (/): 3 motor cards (Vario, NMAX, PCX) all show real motorcycle photos instead of Lucide icons
+  - Photos are at top of card with motor name overlaid at bottom-left in white bold text with drop shadow
+  - Images use object-cover for proper aspect ratio fitting
+- /MOTOR PAGE: All 7 motor cards (Beat, Vario, Gear, Scoopy, NMAX, PCX, Aerox) show real motorcycle photos
+  - All images load successfully (complete=true, no broken images)
+  - NMAX and PCX have "Populer" badges at top-right of card (blue rounded pill)
+  - Beat, Vario, Gear, Scoopy, Aerox have no badge (correct behavior)
+  - Hover effect: `scale-105` with 500ms transition on all images
+- CTA GRADIENT on /motor: BLUE (#2563EB → #1D4ED8), confirmed not black on both desktop and mobile
+- MOBILE RESPONSIVE: Cards display properly in 1-column layout, images fill card width, badges visible
+  - Lazy loading works correctly (Aerox loads when scrolled into view)
+- Zero browser console errors on all tested viewports
+- Screenshots: verify-homepage-desktop-motor-cards.png, verify-motor-page-desktop.png, verify-homepage-mobile.png, verify-homepage-mobile-motor-cards.png, verify-motor-page-mobile.png, verify-motor-page-mobile-scrolled.png, verify-motor-page-mobile-cta.png
+- No issues found
