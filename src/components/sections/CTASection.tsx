@@ -18,7 +18,7 @@ export default function CTASection() {
           className="relative rounded-[2rem] overflow-hidden"
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-rajawali via-rajawali-dark to-black" />
+          <div className="absolute inset-0 bg-gradient-to-br from-rajawali via-rajawali-dark to-rajawali-dark" />
           <div className="absolute inset-0 bg-[url('/hero-motorcycle.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
 

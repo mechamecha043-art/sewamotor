@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
       </div>
 
-      {/* Red Glow Effects */}
+      {/* Blue Glow Effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-rajawali/20 rounded-full blur-[128px]" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-rajawali/15 rounded-full blur-[100px]" />
 
