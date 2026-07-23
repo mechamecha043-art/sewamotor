@@ -1,22 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import { Bike, Phone, Mail, Instagram, MapPin, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, Instagram, MapPin, ExternalLink } from 'lucide-react';
 
 const footerLinks = [
-  { label: 'Beranda', href: '#beranda' },
-  { label: 'Daftar Motor', href: '#motor' },
-  { label: 'Cara Rental', href: '#cara-rental' },
-  { label: 'Syarat & Ketentuan', href: '#syarat' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Beranda', href: '/' },
+  { label: 'Daftar Motor', href: '/motor' },
+  { label: 'Cara Rental', href: '/cara-rental' },
+  { label: 'Lokasi', href: '/lokasi' },
+  { label: 'Kontak', href: '/kontak' },
 ];
 
 export default function Footer() {
-  const handleNavClick = (href: string) => {
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-black text-white relative">
       {/* Red accent line */}
@@ -27,16 +23,22 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-2xl bg-rajawali flex items-center justify-center">
-                <Bike className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-2xl overflow-hidden">
+                <Image
+                  src="/logo.jpg"
+                  alt="Rajawali Motorcycle Rental Jakarta"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <span className="font-bold text-lg leading-tight block">Rajawali</span>
-                <span className="text-xs text-white/60 leading-tight block">Motorcycle Rental Jakarta</span>
+                <span className="text-xs text-white/60 leading-tight block">Motorcycle Rental Jakarta & Tangerang</span>
               </div>
             </div>
             <p className="text-white/60 leading-relaxed max-w-md mb-6">
-              Rajawali Motorcycle Rental Jakarta menyediakan jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan sekitarnya.
+              Rajawali Motorcycle Rental Jakarta menyediakan jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan Tangerang. Armada terawat, nyaman, harga terjangkau.
             </p>
             <div className="flex gap-3">
               <a
@@ -82,12 +84,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => handleNavClick(link.href)}
+                  <Link
+                    href={link.href}
                     className="text-white/70 hover:text-rajawali-light transition-colors text-sm"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -129,7 +131,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-rajawali-light text-sm transition-colors"
                 >
-                  Jakarta, DKI Jakarta
+                  Jakarta & Tangerang
                 </a>
               </li>
             </ul>
@@ -139,7 +141,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            Copyright © 2026 Rajawali Motorcycle Rental Jakarta. All rights reserved.
+            Copyright © {new Date().getFullYear()} Rajawali Motorcycle Rental Jakarta. All rights reserved.
           </p>
           <div className="flex items-center gap-1 text-white/40 text-sm">
             <span>Minimum Sewa</span>

@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
             Solusi Rental Motor{' '}
-            <span className="text-rajawali">Terbaik</span> di Jakarta
+            <span className="text-rajawali">Terbaik</span> di Jakarta & Tangerang
           </h2>
         </motion.div>
 

@@ -1,19 +1,20 @@
 'use client';
 
-import { useState, useEffect, useSyncExternalStore } from 'react';
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Moon, Sun, Bike } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { label: 'Beranda', href: '#beranda' },
-  { label: 'Keunggulan', href: '#keunggulan' },
-  { label: 'Daftar Motor', href: '#motor' },
-  { label: 'Cara Rental', href: '#cara-rental' },
-  { label: 'Syarat', href: '#syarat' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Testimoni', href: '#testimoni' },
+  { label: 'Beranda', href: '/' },
+  { label: 'Daftar Motor', href: '/motor' },
+  { label: 'Cara Rental', href: '/cara-rental' },
+  { label: 'Lokasi', href: '/lokasi' },
+  { label: 'Kontak', href: '/kontak' },
 ];
 
 const WA_LINK = 'https://wa.me/6282310759060?text=Halo%2C%20saya%20ingin%20sewa%20motor';
@@ -22,6 +23,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
+  const pathname = usePathname();
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -34,11 +36,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  const closeMobile = useCallback(() => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }, []);
 
   return (
     <motion.nav
@@ -54,13 +54,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a
-            href="#beranda"
-            onClick={(e) => { e.preventDefault(); handleNavClick('#beranda'); }}
-            className="flex items-center gap-2 group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-rajawali flex items-center justify-center shadow-lg shadow-rajawali/30">
-              <Bike className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-rajawali/30">
+              <Image
+                src="/logo.jpg"
+                alt="Rajawali Motorcycle Rental Jakarta"
+                width={40}
+                height={40}
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="hidden sm:block">
               <span className="font-bold text-sm md:text-base text-foreground leading-tight block">
@@ -70,19 +72,27 @@ export default function Navbar() {
                 Motorcycle Rental
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href)}
-                className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light transition-colors rounded-lg hover:bg-rajawali/5"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobile}
+                  className={`px-3 py-2 text-sm font-medium rounded-lg hover:bg-rajawali/5 transition-colors ${
+                    isActive
+                      ? 'text-rajawali dark:text-rajawali-light'
+                      : 'text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right Actions */}
@@ -130,15 +140,23 @@ export default function Navbar() {
             className="lg:hidden glass border-t border-white/10 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNavClick(link.href)}
-                  className="block w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light hover:bg-rajawali/5 transition-colors"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobile}
+                    className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                      isActive
+                        ? 'text-rajawali dark:text-rajawali-light bg-rajawali/5'
+                        : 'text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light hover:bg-rajawali/5'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <a
                 href={WA_LINK}
                 target="_blank"

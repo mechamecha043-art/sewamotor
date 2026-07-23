@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
+import FloatingWhatsAppWrapper from "@/components/FloatingWhatsAppWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Rajawali Motorcycle Rental Jakarta",
   },
   description:
-    "Rajawali Motorcycle Rental Jakarta menyediakan jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta. Armada terawat, nyaman, harga terjangkau. Tersedia Honda Beat, Vario, NMAX, PCX, Aerox, Scoopy, Yamaha Gear.",
+    "Rajawali Motorcycle Rental Jakarta menyediakan jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan Tangerang. Armada terawat, nyaman, harga terjangkau. Tersedia Honda Beat, Vario, NMAX, PCX, Aerox, Scoopy, Yamaha Gear.",
   keywords: [
     "Rental Motor Jakarta",
     "Sewa Motor Jakarta",
@@ -36,17 +39,21 @@ export const metadata: Metadata = {
     "Sewa Motor Murah Jakarta",
     "Rental Motor Terdekat",
     "Sewa Motor Online Jakarta",
+    "Rental Motor Tangerang",
+    "Sewa Motor Tangerang",
+    "Rental Motor Jakarta Tangerang",
   ],
   authors: [{ name: "Rajawali Motorcycle Rental Jakarta" }],
   creator: "Rajawali Motorcycle Rental Jakarta",
   publisher: "Rajawali Motorcycle Rental Jakarta",
   icons: {
-    icon: "/logo.jpg",
+    icon: "/favicon.ico",
+    apple: "/logo.jpg",
   },
   openGraph: {
-    title: "Rajawali Motorcycle Rental Jakarta | Sewa Motor Mudah, Aman, Nyaman",
+    title: "Rajawali Motorcycle Rental Jakarta & Tangerang | Sewa Motor Mudah, Aman, Nyaman",
     description:
-      "Sewa motor harian, mingguan, dan bulanan di Jakarta dengan harga terjangkau. Honda Beat, Vario, NMAX, PCX, Aerox, Scoopy tersedia.",
+      "Sewa motor harian, mingguan, dan bulanan di Jakarta & Tangerang dengan harga terjangkau. Honda Beat, Vario, NMAX, PCX, Aerox, Scoopy tersedia.",
     url: "https://rentalmotorjakarta.com",
     siteName: "Rajawali Motorcycle Rental Jakarta",
     images: [
@@ -62,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rajawali Motorcycle Rental Jakarta | Sewa Motor Mudah, Aman, Nyaman",
+    title: "Rajawali Motorcycle Rental Jakarta & Tangerang | Sewa Motor Mudah, Aman, Nyaman",
     description:
-      "Sewa motor harian, mingguan, dan bulanan di Jakarta dengan harga terjangkau.",
+      "Sewa motor harian, mingguan, dan bulanan di Jakarta & Tangerang dengan harga terjangkau.",
     images: ["/hero-motorcycle.png"],
   },
   robots: {
@@ -96,19 +103,37 @@ export default function RootLayout({
         "@id": "https://rentalmotorjakarta.com/#business",
         name: "Rajawali Motorcycle Rental Jakarta",
         description:
-          "Jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan sekitarnya.",
+          "Jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan Tangerang.",
         url: "https://rentalmotorjakarta.com",
         telephone: "+6282310759060",
         email: "rentalmotorjakarta@gmail.com",
         image: "https://rentalmotorjakarta.com/hero-motorcycle.png",
         logo: "https://rentalmotorjakarta.com/logo.jpg",
         priceRange: "Rp90.000 - Rp150.000 / hari",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Jakarta",
-          addressRegion: "DKI Jakarta",
-          addressCountry: "ID",
-        },
+        address: [
+          {
+            "@type": "PostalAddress",
+            addressLocality: "Jakarta",
+            addressRegion: "DKI Jakarta",
+            addressCountry: "ID",
+          },
+          {
+            "@type": "PostalAddress",
+            addressLocality: "Tangerang",
+            addressRegion: "Banten",
+            addressCountry: "ID",
+          },
+        ],
+        areaServed: [
+          {
+            "@type": "City",
+            name: "DKI Jakarta",
+          },
+          {
+            "@type": "City",
+            name: "Tangerang",
+          },
+        ],
         geo: {
           "@type": "GeoCoordinates",
           latitude: -6.2088,
@@ -139,15 +164,23 @@ export default function RootLayout({
         "@type": "AutoRental",
         "@id": "https://rentalmotorjakarta.com/#autorental",
         name: "Rajawali Motorcycle Rental Jakarta",
-        description: "Rental motor terpercaya di Jakarta dengan armada terawat",
+        description: "Rental motor terpercaya di Jakarta dan Tangerang dengan armada terawat",
         url: "https://rentalmotorjakarta.com",
         telephone: "+6282310759060",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Jakarta",
-          addressRegion: "DKI Jakarta",
-          addressCountry: "ID",
-        },
+        address: [
+          {
+            "@type": "PostalAddress",
+            addressLocality: "Jakarta",
+            addressRegion: "DKI Jakarta",
+            addressCountry: "ID",
+          },
+          {
+            "@type": "PostalAddress",
+            addressLocality: "Tangerang",
+            addressRegion: "Banten",
+            addressCountry: "ID",
+          },
+        ],
       },
       {
         "@type": "WebSite",
@@ -178,7 +211,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main className="min-h-screen flex flex-col">
+            {children}
+          </main>
+          <Footer />
+          <FloatingWhatsAppWrapper />
           <Toaster />
         </ThemeProvider>
       </body>

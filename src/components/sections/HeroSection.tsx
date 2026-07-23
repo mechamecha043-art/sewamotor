@@ -2,15 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
 const WA_LINK = 'https://wa.me/6282310759060?text=Halo%2C%20saya%20ingin%20sewa%20motor';
 
 export default function HeroSection() {
-  const scrollToMotor = () => {
-    document.querySelector('#motor')?.scrollIntoView({ behavior: 'smooth' });
-  };
+
 
   return (
     <section
@@ -49,7 +48,7 @@ export default function HeroSection() {
           >
             <span className="w-2 h-2 rounded-full bg-rajawali animate-pulse" />
             <span className="text-sm font-medium text-rajawali-light">
-              #1 Motorcycle Rental di Jakarta
+              #1 Motorcycle Rental di Jakarta & Tangerang
             </span>
           </motion.div>
 
@@ -71,7 +70,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="mt-6 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Sewa Motor Harian, Mingguan, dan Bulanan di Jakarta{' '}
+            Sewa Motor Harian, Mingguan, dan Bulanan di Jakarta & Tangerang{' '}
             <br className="hidden sm:block" />
             dengan Harga Terjangkau.
           </motion.p>
@@ -90,14 +89,15 @@ export default function HeroSection() {
                 Sewa Sekarang
               </Button>
             </a>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={scrollToMotor}
-              className="rounded-2xl px-8 py-6 text-base font-semibold border-white/20 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all"
-            >
-              Lihat Daftar Motor
-            </Button>
+            <Link href="/motor">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-2xl px-8 py-6 text-base font-semibold border-white/20 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all"
+              >
+                Lihat Daftar Motor
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Stats */}
