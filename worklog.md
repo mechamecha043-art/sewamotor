@@ -251,3 +251,42 @@ Stage Summary:
   - Other images (gear, scoopy, pcx, aerox): Good quality, clearly real product/studio photographs
 - Screenshots saved to /home/z/my-project/screenshots/task6-*.png
 - No issues found
+
+---
+Task ID: 5-7
+Agent: Bulk Replacer
+Task: Bulk replace red→blue (rajawali), phone numbers, and Instagram references across src/
+
+Work Log:
+- Replaced `text-red-600` → `text-rajawali` across all .ts/.tsx files in src/ (excluding components/ui/)
+  - Affected files: FAQ.tsx, Footer.tsx, KontakContent.tsx, Navbar.tsx, RequirementsSection.tsx, GoogleMap.tsx, Requirements.tsx, LocationContent.tsx, MotorPreview.tsx, Testimonials.tsx, WhyChooseUs.tsx, CTASection.tsx, HowToRentSection.tsx, HeroSection.tsx, MotorListing.tsx, MotorList.tsx, HowToRent.tsx, and all page.tsx files
+- Replaced `text-red-400` → `text-rajawali-light` (also catches `hover:text-red-400` and `dark:text-red-400`)
+  - Affected files: Footer.tsx (4 hover states), Navbar.tsx (4 active/hover/dark states), HeroSection.tsx (1 text)
+- Replaced phone number international format `6282310759060` → `628119899232` (also updates +6282310759060 in Schema.org)
+  - Affected files: FloatingWhatsApp.tsx, Navbar.tsx, HeroSection.tsx, CTASection.tsx, MotorList.tsx, MotorListing.tsx, MotorPreview.tsx, LocationContent.tsx, Footer.tsx, KontakContent.tsx, layout.tsx (Schema.org telephone x2), and all page.tsx/motor/page.tsx/cara-rental/page.tsx
+- Replaced formatted display phone `0823-1075-9060` → `0811-9899-232`
+  - Affected files: Footer.tsx, KontakContent.tsx, kontak/page.tsx (meta description)
+- Replaced Instagram display `@rentalmotorjakarta` → `08119899232`
+  - Affected files: Footer.tsx (2 occurrences), KontakContent.tsx, layout.tsx (sameAs), kontak/page.tsx (meta description)
+- Replaced Instagram href `https://www.instagram.com/rentalmotorjakarta` → `https://www.instagram.com/08119899232`
+  - Affected files: Footer.tsx (2 occurrences), KontakContent.tsx, layout.tsx (sameAs)
+- Updated sitemap.ts: phone number in wa.me links updated via the bulk replacement
+
+Verification:
+- `text-red-600` in src/: ZERO remaining (only `text-red` in components/ui/toast.tsx — shadcn, left alone as instructed)
+- `text-red-400` in src/: ZERO remaining
+- `6282310759060` in src/: ZERO remaining
+- `0823-1075-9060` in src/: ZERO remaining
+- `@rentalmotorjakarta` in src/: ZERO remaining
+- `instagram.com/rentalmotorjakarta` in src/: ZERO remaining
+- `rentalmotorjakarta@gmail.com` (email) and `rentalmotorjakarta.com` (domain): PRESERVED correctly
+
+Stage Summary:
+- All 5 categories of replacements completed successfully across ~20 files
+- Color scheme: all `text-red-600` → `text-rajawali`, all `text-red-400` → `text-rajawali-light` (includes hover and dark variants)
+- Phone: `6282310759060` → `628119899232` (wa.me links, tel: links, Schema.org telephone)
+- Phone: `0823-1075-9060` → `0811-9899-232` (display text, meta descriptions)
+- Instagram: display `@rentalmotorjakarta` → `08119899232`, href updated to `instagram.com/08119899232`
+- No remaining old values found in src/ (excluding shadcn components/ui/)
+- Email (rentalmotorjakarta@gmail.com) and domain (rentalmotorjakarta.com) preserved correctly
+- No issues found

@@ -42,7 +42,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://wa.me/6282310759060"
+                href="https://wa.me/628119899232"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-rajawali flex items-center justify-center transition-colors duration-300"
@@ -51,7 +51,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/rentalmotorjakarta"
+                href="https://www.instagram.com/08119899232"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-rajawali flex items-center justify-center transition-colors duration-300"
@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-red-400 transition-colors text-sm"
+                    className="text-white/70 hover:text-rajawali-light transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -100,36 +100,36 @@ export default function Footer() {
             <h4 className="font-bold text-sm uppercase tracking-wider text-white/40 mb-5">Kontak</h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-red-600 flex-shrink-0" />
-                <a href="tel:+6282310759060" className="text-white/70 hover:text-red-400 text-sm transition-colors">
-                  0823-1075-9060
+                <Phone className="w-4 h-4 text-rajawali flex-shrink-0" />
+                <a href="tel:+628119899232" className="text-white/70 hover:text-rajawali-light text-sm transition-colors">
+                  0811-9899-232
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-red-600 flex-shrink-0" />
-                <a href="mailto:rentalmotorjakarta@gmail.com" className="text-white/70 hover:text-red-400 text-sm transition-colors">
+                <Mail className="w-4 h-4 text-rajawali flex-shrink-0" />
+                <a href="mailto:rentalmotorjakarta@gmail.com" className="text-white/70 hover:text-rajawali-light text-sm transition-colors">
                   rentalmotorjakarta@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Instagram className="w-4 h-4 text-red-600 flex-shrink-0" />
+                <Instagram className="w-4 h-4 text-rajawali flex-shrink-0" />
                 <a
-                  href="https://www.instagram.com/rentalmotorjakarta"
+                  href="https://www.instagram.com/08119899232"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-red-400 text-sm transition-colors inline-flex items-center gap-1"
+                  className="text-white/70 hover:text-rajawali-light text-sm transition-colors inline-flex items-center gap-1"
                 >
-                  @rentalmotorjakarta
+                  08119899232
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-rajawali flex-shrink-0 mt-0.5" />
                 <a
                   href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-red-400 text-sm transition-colors"
+                  className="text-white/70 hover:text-rajawali-light text-sm transition-colors"
                 >
                   Park Serpong, XYZ Charm Blok 25 No. 2
                 </a>
@@ -145,10 +145,10 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-1 text-white/40 text-sm">
             <span>Minimum Sewa</span>
-            <span className="text-red-600 font-bold">3 Hari</span>
+            <span className="text-rajawali font-bold">3 Hari</span>
             <span className="mx-1">·</span>
             <span>Antar Jemput</span>
-            <span className="text-red-600 font-bold">Rp50.000</span>
+            <span className="text-rajawali font-bold">Rp50.000</span>
           </div>
         </div>
       </div>

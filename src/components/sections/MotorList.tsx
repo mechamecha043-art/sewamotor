@@ -76,7 +76,7 @@ const motors: Motor[] = [
   },
 ];
 
-const WA_BASE = 'https://wa.me/6282310759060?text=';
+const WA_BASE = 'https://wa.me/628119899232?text=';
 
 function getWaLink(motor: Motor) {
   const text = `Halo, saya ingin menyewa ${motor.name}. Bisa dibantu?`;
@@ -114,11 +114,11 @@ export default function MotorList() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
             Armada Kami
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Daftar <span className="text-red-600">Motor</span> Tersedia
+            Daftar <span className="text-rajawali">Motor</span> Tersedia
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
             Pilih motor sesuai kebutuhan Anda. Semua unit terawat, bersih, dan siap pakai.
@@ -178,7 +178,7 @@ export default function MotorList() {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-sm text-muted-foreground">30 Hari</span>
-                    <span className="font-bold text-red-600">{motor.monthly}</span>
+                    <span className="font-bold text-rajawali">{motor.monthly}</span>
                   </div>
                 </div>
 

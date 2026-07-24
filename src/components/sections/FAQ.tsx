@@ -56,11 +56,11 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
             FAQ
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Pertanyaan <span className="text-red-600">Umum</span>
+            Pertanyaan <span className="text-rajawali">Umum</span>
           </h2>
         </motion.div>
 

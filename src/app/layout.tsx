@@ -105,7 +105,7 @@ export default function RootLayout({
         description:
           "Jasa sewa motor harian, mingguan, hingga bulanan untuk wilayah DKI Jakarta dan Tangerang.",
         url: "https://rentalmotorjakarta.com",
-        telephone: "+6282310759060",
+        telephone: "+628119899232",
         email: "rentalmotorjakarta@gmail.com",
         image: "https://rentalmotorjakarta.com/hero-motorcycle.png",
         logo: "https://rentalmotorjakarta.com/logo.jpg",
@@ -153,7 +153,7 @@ export default function RootLayout({
           opens: "08:00",
           closes: "21:00",
         },
-        sameAs: ["https://www.instagram.com/rentalmotorjakarta"],
+        sameAs: ["https://www.instagram.com/08119899232"],
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.9",
@@ -166,7 +166,7 @@ export default function RootLayout({
         name: "Rajawali Motorcycle Rental Jakarta",
         description: "Rental motor terpercaya di Jakarta dan Tangerang dengan armada terawat",
         url: "https://rentalmotorjakarta.com",
-        telephone: "+6282310759060",
+        telephone: "+628119899232",
         address: [
           {
             "@type": "PostalAddress",

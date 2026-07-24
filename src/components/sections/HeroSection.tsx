@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
-const WA_LINK = 'https://wa.me/6282310759060?text=Halo%2C%20saya%20ingin%20sewa%20motor';
+const WA_LINK = 'https://wa.me/628119899232?text=Halo%2C%20saya%20ingin%20sewa%20motor';
 
 export default function HeroSection() {
 
@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rajawali/10 border border-rajawali/20 backdrop-blur-sm mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-rajawali animate-pulse" />
-            <span className="text-sm font-medium text-red-400">
+            <span className="text-sm font-medium text-rajawali-light">
               #1 Motorcycle Rental di Jakarta & Tangerang
             </span>
           </motion.div>
@@ -59,7 +59,7 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight"
           >
             Rajawali{' '}
-            <span className="text-red-600">Motorcycle</span>
+            <span className="text-rajawali">Motorcycle</span>
             <br />
             Rental Jakarta
           </motion.h1>
@@ -113,7 +113,7 @@ export default function HeroSection() {
               { value: '4.9', label: 'Rating' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-red-600">
+                <div className="text-2xl sm:text-3xl font-bold text-rajawali">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-white/60 mt-1">

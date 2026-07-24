@@ -76,7 +76,7 @@ const motors: Motor[] = [
   },
 ];
 
-const WA_BASE = 'https://wa.me/6282310759060?text=';
+const WA_BASE = 'https://wa.me/628119899232?text=';
 
 function getWaLink(motor: Motor) {
   const text = `Halo, saya ingin menyewa ${motor.name}. Bisa dibantu?`;
@@ -160,7 +160,7 @@ export default function MotorListing() {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-sm text-muted-foreground">30 Hari</span>
-                    <span className="font-bold text-red-600">{motor.monthly}</span>
+                    <span className="font-bold text-rajawali">{motor.monthly}</span>
                   </div>
                 </div>
 

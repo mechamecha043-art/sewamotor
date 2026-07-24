@@ -17,7 +17,7 @@ const navLinks = [
   { label: 'Kontak', href: '/kontak' },
 ];
 
-const WA_LINK = 'https://wa.me/6282310759060?text=Halo%2C%20saya%20ingin%20sewa%20motor';
+const WA_LINK = 'https://wa.me/628119899232?text=Halo%2C%20saya%20ingin%20sewa%20motor';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -85,8 +85,8 @@ export default function Navbar() {
                   onClick={closeMobile}
                   className={`px-3 py-2 text-sm font-medium rounded-lg hover:bg-rajawali/5 transition-colors ${
                     isActive
-                      ? 'text-red-600 dark:text-red-400'
-                      : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-400'
+                      ? 'text-rajawali dark:text-rajawali-light'
+                      : 'text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light'
                   }`}
                 >
                   {link.label}
@@ -149,8 +149,8 @@ export default function Navbar() {
                     onClick={closeMobile}
                     className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                       isActive
-                        ? 'text-red-600 dark:text-red-400 bg-rajawali/5'
-                        : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-400 hover:bg-rajawali/5'
+                        ? 'text-rajawali dark:text-rajawali-light bg-rajawali/5'
+                        : 'text-muted-foreground hover:text-rajawali dark:hover:text-rajawali-light hover:bg-rajawali/5'
                     }`}
                   >
                     {link.label}

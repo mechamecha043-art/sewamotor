@@ -37,10 +37,10 @@ export default function Requirements() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-rajawali/10 flex items-center justify-center">
-                <FileText className="w-6 h-6 text-red-600" />
+                <FileText className="w-6 h-6 text-rajawali" />
               </div>
               <div>
-                <span className="text-sm font-semibold text-red-600 tracking-wider uppercase">
+                <span className="text-sm font-semibold text-rajawali tracking-wider uppercase">
                   Dokumen
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -59,7 +59,7 @@ export default function Requirements() {
                   transition={{ delay: i * 0.08, duration: 0.4 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-rajawali mt-0.5 flex-shrink-0" />
                   <span className="text-foreground/90 leading-relaxed">{req}</span>
                 </motion.li>
               ))}
@@ -75,10 +75,10 @@ export default function Requirements() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-rajawali/10 flex items-center justify-center">
-                <AlertTriangle className="w-6 h-6 text-red-600" />
+                <AlertTriangle className="w-6 h-6 text-rajawali" />
               </div>
               <div>
-                <span className="text-sm font-semibold text-red-600 tracking-wider uppercase">
+                <span className="text-sm font-semibold text-rajawali tracking-wider uppercase">
                   Peraturan
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -97,7 +97,7 @@ export default function Requirements() {
                   transition={{ delay: i * 0.08, duration: 0.4 }}
                   className="flex items-start gap-3"
                 >
-                  <span className="w-6 h-6 rounded-lg bg-rajawali/10 text-red-600 text-xs font-bold flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <span className="w-6 h-6 rounded-lg bg-rajawali/10 text-rajawali text-xs font-bold flex items-center justify-center mt-0.5 flex-shrink-0">
                     {i + 1}
                   </span>
                   <span className="text-foreground/90 leading-relaxed">{term}</span>
