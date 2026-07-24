@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rajawali/10 border border-rajawali/20 backdrop-blur-sm mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-rajawali animate-pulse" />
-            <span className="text-sm font-medium text-rajawali-light">
+            <span className="text-sm font-medium text-red-600-light">
               #1 Motorcycle Rental di Jakarta & Tangerang
             </span>
           </motion.div>
@@ -59,7 +59,7 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight"
           >
             Rajawali{' '}
-            <span className="text-rajawali">Motorcycle</span>
+            <span className="text-red-600">Motorcycle</span>
             <br />
             Rental Jakarta
           </motion.h1>
@@ -113,7 +113,7 @@ export default function HeroSection() {
               { value: '4.9', label: 'Rating' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-rajawali">
+                <div className="text-2xl sm:text-3xl font-bold text-red-600">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-white/60 mt-1">

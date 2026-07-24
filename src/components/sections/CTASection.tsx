@@ -68,7 +68,7 @@ export default function CTASection() {
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-white text-rajawali hover:bg-white/90 rounded-2xl px-8 py-6 text-base font-bold shadow-xl transition-all hover:shadow-2xl"
+                  className="bg-white text-red-600 hover:bg-white/90 rounded-2xl px-8 py-6 text-base font-bold shadow-xl transition-all hover:shadow-2xl"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat WhatsApp

@@ -83,11 +83,11 @@ export default function MotorPreview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
             Motor Populer
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Pilihan <span className="text-rajawali">Terbaik</span> Kami
+            Pilihan <span className="text-red-600">Terbaik</span> Kami
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
             Motor paling diminati pelanggan kami. Semua unit terawat, bersih, dan siap pakai.
@@ -147,7 +147,7 @@ export default function MotorPreview() {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-sm text-muted-foreground">30 Hari</span>
-                    <span className="font-bold text-rajawali">{motor.monthly}</span>
+                    <span className="font-bold text-red-600">{motor.monthly}</span>
                   </div>
                 </div>
 
@@ -178,7 +178,7 @@ export default function MotorPreview() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-2xl px-8 py-6 text-base font-semibold border-rajawali/30 text-rajawali hover:bg-rajawali/5 hover:border-rajawali/50 transition-all"
+              className="rounded-2xl px-8 py-6 text-base font-semibold border-rajawali/30 text-red-600 hover:bg-rajawali/5 hover:border-rajawali/50 transition-all"
             >
               Lihat Semua Motor
               <ArrowRight className="w-4 h-4 ml-2" />

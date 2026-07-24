@@ -85,11 +85,11 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
             Testimoni
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Apa Kata <span className="text-rajawali">Mereka</span>
+            Apa Kata <span className="text-red-600">Mereka</span>
           </h2>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function Testimonials() {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
               className="rounded-3xl bg-card border border-border p-8 md:p-12 text-center"
             >
-              <Quote className="w-10 h-10 text-rajawali/20 mx-auto mb-6" />
+              <Quote className="w-10 h-10 text-red-600/20 mx-auto mb-6" />
               <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-8 italic">
                 &ldquo;{t.text}&rdquo;
               </p>

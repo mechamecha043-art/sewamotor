@@ -160,7 +160,7 @@ export default function MotorListing() {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-sm text-muted-foreground">30 Hari</span>
-                    <span className="font-bold text-rajawali">{motor.monthly}</span>
+                    <span className="font-bold text-red-600">{motor.monthly}</span>
                   </div>
                 </div>
 

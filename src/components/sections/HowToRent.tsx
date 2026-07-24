@@ -44,11 +44,11 @@ export default function HowToRent() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
             Cara Rental
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            4 Langkah <span className="text-rajawali">Mudah</span>
+            4 Langkah <span className="text-red-600">Mudah</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             Proses rental yang cepat dan simpel, dari pilihan motor hingga motor diantar ke lokasi Anda.
@@ -74,7 +74,7 @@ export default function HowToRent() {
                 {/* Step Number */}
                 <div className="relative inline-flex mb-6">
                   <div className="w-28 h-28 rounded-3xl bg-rajawali/5 flex items-center justify-center group-hover:bg-rajawali/10 transition-colors duration-300 border border-rajawali/10">
-                    <item.icon className="w-10 h-10 text-rajawali" />
+                    <item.icon className="w-10 h-10 text-red-600" />
                   </div>
                   <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-rajawali text-white text-sm font-bold flex items-center justify-center shadow-lg shadow-rajawali/30">
                     {item.step}

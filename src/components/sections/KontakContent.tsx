@@ -97,7 +97,7 @@ export default function KontakContent() {
                 className="group rounded-3xl bg-card border border-border p-6 hover:border-rajawali/20 hover:shadow-xl hover:shadow-rajawali/5 transition-all duration-300 text-center"
               >
                 <div className="w-14 h-14 rounded-2xl bg-rajawali/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-rajawali transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-rajawali group-hover:text-white transition-colors duration-300" />
+                  <item.icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-foreground mb-1">{item.label}</h3>
                 <p className="text-sm text-muted-foreground break-all">{item.value}</p>
@@ -117,7 +117,7 @@ export default function KontakContent() {
             className="mt-8 rounded-3xl bg-card border border-border p-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left"
           >
             <div className="w-12 h-12 rounded-2xl bg-rajawali/10 flex items-center justify-center flex-shrink-0">
-              <Clock className="w-6 h-6 text-rajawali" />
+              <Clock className="w-6 h-6 text-red-600" />
             </div>
             <div>
               <h3 className="font-bold text-foreground">Jam Operasional</h3>
@@ -158,7 +158,7 @@ export default function KontakContent() {
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="bg-white text-rajawali hover:bg-white/90 rounded-2xl px-8 py-6 text-base font-bold shadow-xl transition-all hover:shadow-2xl"
+                  className="bg-white text-red-600 hover:bg-white/90 rounded-2xl px-8 py-6 text-base font-bold shadow-xl transition-all hover:shadow-2xl"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat WhatsApp Sekarang
@@ -195,11 +195,11 @@ export default function KontakContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+            <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
               FAQ
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-              Pertanyaan <span className="text-rajawali">Umum</span>
+              Pertanyaan <span className="text-red-600">Umum</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
               Temukan jawaban atas pertanyaan yang sering diajukan pelanggan kami.
@@ -242,11 +242,11 @@ export default function KontakContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+            <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
               Lokasi Kami
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-              Temukan <span className="text-rajawali">Kami</span>
+              Temukan <span className="text-red-600">Kami</span>
             </h2>
           </motion.div>
 

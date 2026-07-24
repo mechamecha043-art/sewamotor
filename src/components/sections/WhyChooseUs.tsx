@@ -56,12 +56,12 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-rajawali tracking-wider uppercase mb-3">
+          <span className="inline-block text-sm font-semibold text-red-600 tracking-wider uppercase mb-3">
             Kenapa Memilih Kami
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
             Solusi Rental Motor{' '}
-            <span className="text-rajawali">Terbaik</span> di Jakarta & Tangerang
+            <span className="text-red-600">Terbaik</span> di Jakarta & Tangerang
           </h2>
         </motion.div>
 
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-2xl bg-rajawali/10 flex items-center justify-center mb-6 group-hover:bg-rajawali group-hover:shadow-lg group-hover:shadow-rajawali/30 transition-all duration-300">
-                <feature.icon className="w-7 h-7 text-rajawali group-hover:text-white transition-colors duration-300" />
+                <feature.icon className="w-7 h-7 text-red-600 group-hover:text-white transition-colors duration-300" />
               </div>
 
               <h3 className="text-xl font-bold text-foreground mb-3">
