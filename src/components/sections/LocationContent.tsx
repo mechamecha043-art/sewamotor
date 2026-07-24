@@ -65,7 +65,7 @@ export default function LocationContent() {
               </div>
 
               <a
-                href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
+                href="https://maps.app.goo.gl/vE1W64qWkfEZQ2D79"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -229,7 +229,7 @@ export default function LocationContent() {
                   </div>
                 </a>
                 <a
-                  href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
+                  href="https://maps.app.goo.gl/vE1W64qWkfEZQ2D79"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

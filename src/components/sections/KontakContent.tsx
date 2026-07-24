@@ -80,7 +80,7 @@ export default function KontakContent() {
                 icon: MapPin,
                 label: 'Lokasi',
                 value: 'Park Serpong, XYZ Charm Blok 25 No. 2',
-                href: 'https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5',
+                href: 'https://maps.app.goo.gl/vE1W64qWkfEZQ2D79',
                 external: true,
               },
             ].map((item, i) => (
@@ -165,7 +165,7 @@ export default function KontakContent() {
                 </Button>
               </a>
               <a
-                href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
+                href="https://maps.app.goo.gl/vE1W64qWkfEZQ2D79"
                 target="_blank"
                 rel="noopener noreferrer"
               >

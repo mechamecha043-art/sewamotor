@@ -67,7 +67,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
               </a>
               <a
-                href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
+                href="https://maps.app.goo.gl/vE1W64qWkfEZQ2D79"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-rajawali flex items-center justify-center transition-colors duration-300"
@@ -126,7 +126,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-rajawali flex-shrink-0 mt-0.5" />
                 <a
-                  href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
+                  href="https://maps.app.goo.gl/vE1W64qWkfEZQ2D79"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-rajawali-light text-sm transition-colors"
