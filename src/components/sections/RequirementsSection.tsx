@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 const requirements = [
-  'Fotokopi KTP',
-  'Fotokopi KK',
+  'KTP asli ditahan, apabila KTP diperlukan, maka wajib identitas asli lainnya yang ditahan',
   'Menunjukkan dokumen asli',
   'Bersedia difoto',
   'Pembayaran lunas di muka',
