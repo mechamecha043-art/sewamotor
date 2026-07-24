@@ -109,7 +109,7 @@ export default function HeroSection() {
           >
             {[
               { value: '500+', label: 'Pelanggan Puas' },
-              { value: '7', label: 'Unit Motor' },
+              { value: '80+', label: 'Unit Motor' },
               { value: '4.9', label: 'Rating' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
