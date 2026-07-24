@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rajawali/10 border border-rajawali/20 backdrop-blur-sm mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-rajawali animate-pulse" />
-            <span className="text-sm font-medium text-red-600-light">
+            <span className="text-sm font-medium text-red-400">
               #1 Motorcycle Rental di Jakarta & Tangerang
             </span>
           </motion.div>

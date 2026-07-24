@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-red-600-light transition-colors text-sm"
+                    className="text-white/70 hover:text-red-400 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -101,13 +101,13 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-red-600 flex-shrink-0" />
-                <a href="tel:+6282310759060" className="text-white/70 hover:text-red-600-light text-sm transition-colors">
+                <a href="tel:+6282310759060" className="text-white/70 hover:text-red-400 text-sm transition-colors">
                   0823-1075-9060
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-red-600 flex-shrink-0" />
-                <a href="mailto:rentalmotorjakarta@gmail.com" className="text-white/70 hover:text-red-600-light text-sm transition-colors">
+                <a href="mailto:rentalmotorjakarta@gmail.com" className="text-white/70 hover:text-red-400 text-sm transition-colors">
                   rentalmotorjakarta@gmail.com
                 </a>
               </li>
@@ -117,7 +117,7 @@ export default function Footer() {
                   href="https://www.instagram.com/rentalmotorjakarta"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-red-600-light text-sm transition-colors inline-flex items-center gap-1"
+                  className="text-white/70 hover:text-red-400 text-sm transition-colors inline-flex items-center gap-1"
                 >
                   @rentalmotorjakarta
                   <ExternalLink className="w-3 h-3" />
@@ -129,9 +129,9 @@ export default function Footer() {
                   href="https://maps.app.goo.gl/v8eCHVWnA5Qm5jQu5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-red-600-light text-sm transition-colors"
+                  className="text-white/70 hover:text-red-400 text-sm transition-colors"
                 >
-                  Jakarta & Tangerang
+                  Park Serpong, XYZ Charm Blok 25 No. 2
                 </a>
               </li>
             </ul>

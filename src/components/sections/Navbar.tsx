@@ -86,7 +86,7 @@ export default function Navbar() {
                   className={`px-3 py-2 text-sm font-medium rounded-lg hover:bg-rajawali/5 transition-colors ${
                     isActive
                       ? 'text-red-600 dark:text-red-400'
-                      : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-600-light'
+                      : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-400'
                   }`}
                 >
                   {link.label}
@@ -150,7 +150,7 @@ export default function Navbar() {
                     className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                       isActive
                         ? 'text-red-600 dark:text-red-400 bg-rajawali/5'
-                        : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-600-light hover:bg-rajawali/5'
+                        : 'text-muted-foreground hover:text-red-600 dark:hover:text-red-400 hover:bg-rajawali/5'
                     }`}
                   >
                     {link.label}
